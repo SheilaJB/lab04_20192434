@@ -24,7 +24,7 @@ public class RecetaController {
     public String receta(Model model) {
 
         //Mostrar toda las recetas
-        List<Receta> recetas = recetaRepository.findByNombre();
+        List<Receta> recetas = recetaRepository.findAll();
 
         model.addAttribute("receta", recetas);
         return "receta/lista";
